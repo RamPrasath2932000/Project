@@ -1,0 +1,17 @@
+import React, { useState } from 'react';
+
+export default function ToggleText1() {
+  const [isVisible, setIsVisible] = useState(true);
+
+  const handleToggle = () => {
+    setIsVisible(!isVisible);
+  };
+
+  return (
+    <div>
+        <h1>Toggle Text Example</h1>
+        <button onClick={handleToggle}>{isVisible ? 'Hide Text' : 'Show Text'}</button>
+        {isVisible && <p>This is the toggleable text.</p>}
+    </div>
+  );
+}

@@ -1,0 +1,56 @@
+/* .first{
+    background-image:url("/src/images/earth.jpg");
+} */
+.quiz-container{
+    padding: 25px;
+    width: 50rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color: black;
+    border-radius: 10%;
+    background-color: lightblue;
+    border: 2.2px solid brown;
+}
+.question{
+    font-size: larger;
+}
+ul{
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-gap: 1rem;
+    list-style-type:none;
+}
+li{
+    padding: 1rem;
+    background-color: aliceblue;
+    color: blue;
+    cursor: pointer;
+    border-radius: 0.5rem;
+    transition: all 0.5s ease;
+    text-align: center;
+}
+/* li::after{
+    background-color: aqua;
+} */
+li:hover{
+    box-shadow: 0px 1px 10px #fff;
+}
+button{
+    border-radius:5px;
+    background-color: lightblue;
+}
+button:hover{
+    background-color: aquamarine;
+    transition: all 0.5s ease;
+    box-shadow: 0px 10px 15px;
+}
+/* .list:active{
+    background-color: greenyellow;
+} */
+.list:hover{
+    background-color: lightsalmon;
+}
