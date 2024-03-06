@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <h1>Area of Heptagon</h1>
+        <p>A=(7/4)a<sup>2</sup>cot(180<sup><span>&#176;</span></sup>/7)</p>
+        <script>
+            let degrees = 180;
+            let radians = degrees * Math.PI/180;
+            a=parseFloat(prompt("Enter the Side value"))
+            A=(7/4)*(a**2)*(1/(Math.tan(radians/7)))
+            document.write("The Side is "+a)
+            document.write("<br>")
+            document.write("<br>")
+            document.write("<b>The Area of Heptagon is </b>"+A)       
+        </script>
+    </body>  
+</html>

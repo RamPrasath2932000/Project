@@ -1,0 +1,30 @@
+<html>
+    <body>
+        <h1>Compound interest Calculator</h1>
+        <script>
+        P=parseFloat(prompt("Enter the principle amount"))
+        i=parseFloat(prompt("Enter the Annual rate of interest"))
+        t=parseFloat(prompt("Enter the tenure"))
+        n=parseFloat(prompt("Enter the number of times the interest compounds in a year"))
+        r=i/100
+        A = P*((1 + (r/n))**(n*t))
+        M=A-P
+            document.write("The principle amount is "+P)
+            document.write("<br>")
+            document.write("<br>")
+            document.write("Tenure is "+t)
+            document.write("<br>")
+            document.write("<br>")
+            document.write("The annual rate of interest is "+i)
+            document.write("<br>")
+            document.write("<br>")
+            document.write("The number of times the interest compounds in a year is "+n)
+            document.write("<br>")
+            document.write("<br>")
+            document.write("The Totally earned interest is "+M)
+            document.write("<br>")
+            document.write("<br>")
+            document.write("The Total maturity amount is "+A) 
+    </script>
+    </body>
+</html>

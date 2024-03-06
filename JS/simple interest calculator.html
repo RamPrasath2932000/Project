@@ -1,0 +1,96 @@
+<html>
+    <head>
+        <script>
+            function calculate(){
+                var P,R,T,I,M;
+            P=parseFloat(document.getElementById("princ").value);
+            R=parseFloat(document.getElementById("rate").value);
+            selectElement = document.querySelector('#select1');
+            output = selectElement.value;
+            T=parseFloat(output);
+            I=(P*R*T)/100;
+            document.getElementById("answer1").value=I;
+            M=I+P;
+            document.getElementById("answer2").value=M;        }
+    
+        </script>
+        <style>
+            body{
+                background-color: black;
+            }
+            .column {
+                float: left;
+                padding: 10px;
+              }
+              
+              /* Clear floats after the columns */
+            .row:after {
+                content: "";
+                display: table;
+                clear: both;
+              }
+              input{
+                border:none;
+                background-color:rgba(0,0,0,0);
+                border-bottom: 2px solid black;
+              }
+              select{
+                border:none;
+                border-radius: 5px;
+                background-color:rgba(0,0,0,0);
+                border: 2px solid black;
+              }
+              ::placeholder {
+                color: rgba(45, 42, 42, 0.928);
+                opacity: 1; /* Firefox */
+              }
+              
+              :-ms-input-placeholder { /* Internet Explorer 10-11 */
+               color: rgba(47, 45, 45, 0.506);
+              }
+              
+              ::-ms-input-placeholder { /* Microsoft Edge */
+               color: rgb(32, 30, 30);
+              }
+              
+        </style>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <body style="background-color:aqua">
+        <div class="row" style="text-align:center;display:flex;justify-content:center;align-items:center;">
+        <div class="column" style="text-align:center;">
+            <h1 style="margin-left: 100px;margin-right: 100px;">Simple Interest Calculator</h1>
+        </div>
+        <div class="column" style="font-size: xx-large;text-align:center;background-color:cadetblue;margin-left:100px;width:830px;height: 730px;padding-top:120px">
+            <form >
+            <p><input  id="princ" class="rounded" placeholder="Principle Amount" required></p>
+            <br>
+            <p><input  id="rate" class="rounded" placeholder="Rate of Interest" required></p>
+            <br>
+            <select id="select1" class="rounded" style="margin-left:1px;padding-left:146px;padding-right:146px;padding-top:2.5px;padding-bottom:2.5px;">
+                <option>Years</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+        </form>
+        <br>
+        <button onclick="calculate()" class="btn btn-success btn-rounded" style="font-size: xx-large;width: 180px;height:60px">Calculate</button>
+        <br>
+        <div style="margin-top: 10px">
+        <p>Total Interest = <input id="answer1" style="cursor: none; background: transparent; border: none;background-color:rgba(0,0,0,0)" readonly></p>
+        <p>Total Maturity = <input id="answer2" style="cursor: none;background: transparent; border: none;background-color:rgba(0,0,0,0)" readonly></p>
+    </div>
+    </div>
+    </div>    
+    </body>
+</html>

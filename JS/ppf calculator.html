@@ -1,0 +1,22 @@
+<html>
+    <body>
+        <h1>PPF Calculator</h1>
+        <script>
+            r=parseFloat(prompt("Enter the rate"))
+            n=parseFloat(prompt("Enter the number of years"))
+            P=parseFloat(prompt("Enter the annual instalments"))
+            i=r/100
+            F=((((1+i)**n)-1)/i)*P
+            document.write("The annual instalment is "+P)
+            document.write("<br>")
+            document.write("<br>")
+            document.write("Number of years "+n)
+            document.write("<br>")
+            document.write("<br>")
+            document.write("The rate of interest is "+r)
+            document.write("<br>")
+            document.write("<br>")
+            document.write("The maturity amount is "+F)        
+        </script>
+    </body>
+</html>

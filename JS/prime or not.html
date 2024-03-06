@@ -1,0 +1,31 @@
+<html>
+    <body>
+        <h1>Prime or not</h1>
+        <script>
+            num=parseInt(prompt("Enter the number:"))
+            if(num==0){
+                document.write(num+" is zero.")
+            }
+            else if(num==2){
+                document.write(num+" is prime number.")
+            }
+            for(i=2;i<num;i++)
+            {
+                if(num%i==0){
+                    flag=false;
+                    break;
+                }
+                else{
+                    flag=true;
+                }
+            }
+            if(flag==true){
+                document.write(num+" is prime number.")
+            }
+            else{
+                document.write(num+" is not a prime number.")
+            }
+        </script>
+    </body>
+
+</html>
