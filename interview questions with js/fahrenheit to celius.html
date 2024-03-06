@@ -1,0 +1,67 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: burlywood;
+            }
+            .main{
+                width: 50%;
+                height: 40%;
+                text-align: center;
+                border-radius: 10px;
+                border:2px solid gray;
+                background-color:rgba(255,255,255,0.1);
+                backdrop-filter:blur(10px);
+                filter: drop-shadow(5px 5px 5px black);
+            }
+            ::placeholder {
+                color: whitesmoke;
+                opacity: 0.75; /* Firefox */
+              }
+              
+              :-ms-input-placeholder { /* Internet Explorer 10-11 */
+               color: whitesmoke;
+              }
+              
+              ::-ms-input-placeholder { /* Microsoft Edge */
+               color: whitesmoke;
+              }
+
+
+        </style>
+        <script>
+            function calculate(){
+                var cel,fah;
+                fah=parseFloat(document.getElementById("fahren").value)
+                cel = (fah-32)*5/9;
+                document.getElementById("cel").value=cel;
+        }
+        </script>
+    </head>
+    
+    <body>
+        <div class="main">
+        <div class="heading">
+            <h1>Fahrenheit to Celcius Converter</h1>
+        </div>
+        <br>
+        <div class="fahrenheit">
+            <p><input id="fahren" style="border-radius: 5px;text-align: center;background:rgba(255,255,255,0.1);color:aliceblue" placeholder="Enter the fahrenheit" required></p>
+        </div>
+        <br>
+        <div class="but">
+        <button class="btn btn-warning" onclick="calculate()">Calculate</button>
+    </div>
+    <br>
+    <div class="celcius" style="font-size: large;">
+        <p>Celcius = <input id="cel" style="text-align: center;cursor: none;background: transparent; border: none;background-color:rgba(0,0,0,0)" readonly><sup>&deg;</sup>C</p> 
+    </div>
+</div>   
+    </body>
+</html>

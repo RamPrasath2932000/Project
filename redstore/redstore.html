@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+                align-content: center;
+                align-items: center;
+                background-color:red;
+                background-attachment: fixed;
+                text-align: center;
+            }
+            a{
+                text-decoration: none;
+                padding: 10px;
+                font-size: 20px;
+                color:rgb(91, 77, 77);
+            }
+            .content{
+                display:none;
+                position: absolute;
+                background-color: antiquewhite;
+                min-width: 160px;
+                z-index: 1;
+
+            }
+            .content a{
+                border: 1px solid black;
+                color: black;
+                padding: 1px 1px;
+                text-decoration: none;
+                display: block;
+            }
+            .dropbtn{
+                background-color: rgb(177, 168, 168);
+                color: black;
+            }
+
+            .content a:hover{
+                background-color:cadetblue;
+                border: none;
+            }
+            .dropdown:hover .content{
+                display: block;
+            }
+            .dropbtn:hover{
+                background-color: aqua;
+            }
+            .products{
+                display: flex;
+                flex-wrap: wrap;
+                column-gap: 115px;
+                row-gap: 10px;
+                
+                
+            }
+            .container{
+                display: flex;
+                flex-wrap: wrap;
+                position: relative;
+                top: 2%;
+                left: 8%;
+                width: 1000px;
+                height: 400px;
+                
+
+            }
+            .checked{
+                color: orange;
+            }
+            .scrollable-content {
+                /* Set a fixed height for the scrollable container */
+                height: 300px;
+                /* Enable overflow scrolling */
+                overflow: auto;
+                /* Hide the scrollbar */
+                scrollbar-width: thin;
+                scrollbar-color: transparent transparent;
+              }
+              
+              /* For WebKit browsers (Chrome, Safari) */
+              .scrollable-content::-webkit-scrollbar {
+                width: 5px;
+              }
+              
+              .scrollable-content::-webkit-scrollbar-thumb {
+                background-color: transparent;
+              }
+              
+              .scrollable-content::-webkit-scrollbar-track {
+                background-color: transparent;
+              }
+              
+
+
+        </style>
+    </head>
+    <body>
+        <div style="background-color: aliceblue;width:1300px;height:600px;margin-top:4.3%;text-align:center">
+            <div class="nav">
+                <div style="margin-left:5%;margin-top:1%">
+                <img style="float:left;width:15%" src="logo.png" alt="Company Logo">
+            </div>
+
+            <div style="margin-top: 10px;float:right;margin-right:3%;">
+                <a href="#">Home</a>
+                <a href="#">Products</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+                <a href="#">Account</a>
+                <a href="#"><img style="width:20px;height:20px" src="shopbag.gif"></a>
+            </div>
+            </div>
+            
+            <div class="container" style="width:1070px;">
+            <h1 style="float: left;">All Products</h1>
+            
+            <div class="dropdown" style="float: right;position:relative;left:75.58%;top:10.5%">
+                <button class="dropbtn">Sort by sale</button>
+                <div class="content">
+                    <a href="#">Default Shorting</a>
+                    <a href="#">Short by price</a>
+                    <a href="#">Short by popularity</a>
+                    <a href="#">Short by rating</a>
+                    <a href="#">Short by sale</a>
+                </div>
+
+            </div>
+
+
+            <div class="scrollable-content" style="height: 400px;">
+           <div class="products">
+                <div class="1">
+                    <img src="1.jpg" alt="Product" style="width:180px;height:230px">
+                    <p>Grey Printed T-Shirt</p>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <p>$50.00</p>
+                </div>
+                <div class="2">
+                    <img src="2.jpg" alt="Product" style="width:180px;height:230px">
+                    <p>Newzland Jersey</p>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <p>$80.00</p>
+                </div>
+                <div class="3">
+                    <img src="3.jpg" alt="Product" style="width:180px;height:230px">
+                    <p>RRR T-Shirt</p>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <p>$100.00</p>
+                </div>
+                <div class="4">
+                    <img src="4.jpg" alt="Product" style="width:180px;height:230px">
+                    <p>White Printed T-Shirt</p>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <p>$60.00</p>
+                </div>
+                <div class="5">
+                    <img src="5.jpg" alt="Product" style="width:180px;height:230px">
+                    <p>Black T-Shirt</p>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <p>$50.00</p>
+                </div>
+                <div class="6">
+                    <img src="6.jpg" alt="Product" style="width:180px;height:230px">
+                    <p>Black do it T-Shirt</p>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <p>$70.00</p>
+                </div>
+                <div class="7">
+                    <img src="7.jpg" alt="Product" style="width:180px;height:230px">
+                    <p>Five Sleeve T-Shirt</p>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <p>$85.00</p>
+                </div>
+                <div class="8">
+                    <img src="8.jpg" alt="Product" style="width:180px;height:230px">
+                    <p>Fade Red T-Shirt</p>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <p>$50.00</p>
+                </div>
+                <div class="9">
+                    <img src="9.jpg" alt="Product" style="width:180px;height:230px">
+                    <p>White T-Shirt</p>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star "></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <p>$30.00</p>
+                </div>
+                <div class="10">
+                    <img src="10.jpg" alt="Product" style="width:180px;height:230px">
+                    <p>Signature T-Shirt</p>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                    <p>$40.00</p>
+                </div>
+                <div class="11">
+                    <img src="11.jpg" alt="Product" style="width:180px;height:230px">
+                    <p>Venom Neon Hoodie</p>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <p>$100.00</p>
+                </div>
+                <div class="5">
+                    <img src="5.jpg" alt="Product" style="width:180px;height:230px">
+                    <p>Spider-man Hoodie</p>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <p>$90.00</p>
+                </div>
+
+            </div>
+        </div>
+
+            </div>
+
+            
+
+             
+        </div>
+    </body>
+</html>

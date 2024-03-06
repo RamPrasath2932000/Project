@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.css">        
+        <style>
+            body{
+                background-color: black;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .circle{
+                width:200px;
+                height: 200px;
+                position: absolute;
+                border-radius: 100%;
+                z-index:-1;
+            }
+
+            .circle:first-child{
+                background: linear-gradient(rgb(64, 64, 232),rgb(115, 211, 243));
+                left: 33%;
+                top: 10%;                
+            }
+            
+            .circle:last-child{
+                background: linear-gradient(rgb(234, 102, 75),rgb(247, 165, 77));
+                left: 54%;
+                top: 65%;
+            }
+
+            form{
+                justify-content: center;
+                align-items: center;
+                color: white;
+                background: rgba(0, 0, 0, 0);
+                background-color:rgba(255,255,255,0.1);
+                backdrop-filter:blur(10px);
+                position: absolute;
+                top: 25%;
+                width: 300px;
+                height: 400px;
+                bottom:  25%;
+                border-radius: 10px;
+                border:2px solid rgba(35, 2, 2, 0.12);
+                
+
+            }
+
+            label{
+                margin-left:35px;
+                margin-bottom: 10px;
+            }
+            input{
+                margin-left: 35px;
+                margin-bottom: 20px;
+                width:224px;
+                
+            }
+
+            .login{
+                text-align: center;
+                border-color: white;
+            }
+            .smedia{
+                margin-top: 5px;
+                display: inline-flex;
+                flex-direction: row;
+                gap: 25px;
+                position: relative; 
+            
+            }
+            
+
+
+
+
+        </style>
+    </head>
+
+    <body>
+        <div class="shape">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+
+        <form>
+            <div class="content">
+            <h1 style="text-align: center;margin-top:10%">Login Here</h1>
+            <br>
+
+            <label for="name">Username</label><br>
+            <input type="text" style="background-color: rgba(255, 255, 255, 0.635);border-radius: 5px;padding-top:7px;padding-bottom:7px" placeholder="Email or Phone">
+            <br>
+
+            <label for="name">Password</label><br>
+            <input type="password" style="background-color: rgba(255, 255, 255, 0.635);border-radius: 5px; padding-top:7px;padding-bottom:7px" placeholder="Password">
+            <br><br>
+
+            <div class="login">
+            <button style="width:230px;padding-top:10px;padding-bottom: 10px;border-radius:5px;" type="submit">Login</button>
+        </div>
+            <br>
+
+
+            <div class="smedia">
+            <button style="color: white;background-color: rgba(255,255,255,.3);position:relative;left:17%;padding-top:5px;padding-bottom:5px;padding-left:17px;padding-right:17px;border-radius:5px"><i class="fab fa-google"></i>   Google</button>
+            <button style="color: white;background-color: rgba(255,255,255,.3);position:relative;left:20%;padding-top:5px;padding-bottom:5px;padding-left:10px;padding-right:10px;border-radius:5px"><i class="fab fa-facebook"></i>   Facebook</button>
+        </div>
+    </div>
+
+        </form>
+
+
+    </body>
+
+
+</html><!-- background-color:rgba(255,255,255,0.1); -->                 <!-- backdrop-filter:blur(10px); -->

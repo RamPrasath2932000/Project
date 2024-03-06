@@ -1,0 +1,129 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        
+        <style>
+            body{
+                display: flex;
+                justify-content: center;
+                background-color: rgb(11, 165, 221);
+                align-items: center;
+            }
+            .main{
+                width: 70%;
+                height: 80%;
+                background-color:rgb(253, 251, 251);
+                border-radius: 5px;
+
+            }
+            .heading{
+                text-align: center;
+            }
+            h1{
+                color: rgb(18, 101, 101);
+            }
+            input{
+                width:90%;
+                color:rgb(101, 100, 100);
+                border:1px solid gray;
+                border-radius: 2px;
+            }
+            button{
+                width:82%;
+                background-color: rgb(18, 101, 101);
+                color: aliceblue;
+            }
+            .result{
+                text-align: center;
+                font-size:15px;
+            }
+            
+            select{
+                width:90%;
+                height:4.5%;
+            }
+
+
+
+        </style>
+        <script>
+            function calculate(){
+                P=parseFloat(document.getElementById("prin").value)
+                i=parseFloat(document.getElementById("in").value)
+                t=parseFloat(document.getElementById("year").value)
+                selectElement = document.querySelector('#drop');
+                output = selectElement.value;
+                n=output;
+                console.log(output)
+                if(output=="Yearly"){
+                    n=1;
+                }
+                else if(output=="Half yearly"){
+                    n=2;
+                }
+                else{
+                    n=4;
+                }
+                r=i/100;
+                A = P*((1 + (r/n))**(n*t));
+                document.getElementById("result2").value=A;
+                M=A-P;
+                document.getElementById("result1").value=M;
+        }
+        </script>
+    </head>
+    <body>
+        <div class="main">
+            <div class="heading">
+                <h1>Compound Interest Calculator</h1>
+            </div>
+            <form style="margin-left: 9%;">
+                <div class="principal">
+                    <label>Principal</label>
+                    <br>
+                    <p><input id="prin" required></p>
+                </div>
+                <br>
+
+                <div class="interest">
+                    <label>Interest rate</label>
+                    <br>
+                    <p><input id="in" required></p>
+                </div>
+                <br>
+
+                <div class="years">
+                    <label>Number of periods</label>
+                    <br>
+                    <p><input id="year" required></p>
+                </div>
+                <br>
+
+                <div class="frequency">
+                    <label>Compounding frequency</label>
+                    <br>
+                    <select id="drop" name="box" required>
+                        <option value="1">Yearly</option>
+                        <option value="2">Half yearly</option>
+                        <option value="4">Quarterly</option>
+                    </select>
+                </div>
+            </form>
+            <br>
+            <div style="text-align:center">
+                <button onclick="calculate()" class="btn btn-rounded" >Calculate</button>
+            </div>
+            <br>
+            <div class="result">
+                <label>Result</label>
+                <br>
+                <p>Total Interest = <input id="result1" style="width: 200px;height:15px; text-align: center;cursor: none; background: transparent; border: none;background-color:rgba(0,0,0,0)" readonly></p>
+                <p>Total Maturity Value = <input id="result2" style="width: 200px;height:15px; text-align: center;cursor: none; background: transparent; border: none;background-color:rgba(0,0,0,0)" readonly></p>
+            </div>
+
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html style="background-image: url(ocean.jpg);background-size:cover;background-attachment:fixed;background-color:black">
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.css">        
+        <style>
+            body{
+                background-color: black;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+            }
+
+            form{
+                justify-content: center;
+                align-items: center;
+                color: white;
+                background-color:rgba(255,255,255,0.1);
+                position: absolute;
+                top: 25%;
+                width: 350px;
+                height: 350px;
+                backdrop-filter:blur(10px);
+                bottom:  25%;
+                border-radius: 10px;
+
+            }
+            
+            input{
+                margin-left: 59px;
+                margin-bottom: 20px;
+                width:224px;
+                
+            }
+
+            .send{
+                text-align: center;
+                border-color: white;
+            }
+          
+            
+
+
+
+
+        </style>
+    </head>
+
+    <body>
+        <form>
+            <div class="content">
+            <h1 style="text-align: center;margin-top:14%">Forgotten Password</h1>
+            <br>
+
+            <input type="text" style="background-color: rgba(255, 255, 255, 0.635);border-radius: 5px;padding-top:7px;padding-bottom:7px" placeholder="Email" required>
+            <br>
+
+            <input type="nummbers" style="background-color: rgba(255, 255, 255, 0.635);border-radius: 5px; padding-top:7px;padding-bottom:7px" placeholder="Mobile Number" required>
+            <br><br>
+
+            <div class="send">
+            
+            <button onclick="window.location.href = 'OTP.html';"   style="width:230px;padding-top:10px;padding-bottom: 10px;border-radius:5px;cursor:pointer;" type="btn"><b>Send OTP</b></button>
+       
+        </div>
+            <br>
+        </div>
+
+        </form>
+
+
+    </body>
+
+
+</html>

@@ -1,0 +1,86 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <style>
+            html{
+                background-color: black;
+            }
+            body{
+                display: flex;
+                justify-content: center;
+                justify-items: center;
+                align-items: center;
+            }
+            legend{
+                text-align: center;
+                color: chartreuse;
+                background-color: black;
+                border-radius: 7px;
+                border: 3px dashed  chartreuse;
+            }
+            fieldset{
+                border:3px dashed;
+                color:chartreuse;
+                background-image:url("giphy.gif");
+                background-attachment: fixed;
+                background-position: 70px;
+                border-radius: 15px;
+                cursor:default;
+            }
+            input{
+                background-color: black;
+                border-color: chartreuse;
+                border-radius: 5px;
+                color:chartreuse;
+            }
+            div{
+                text-align: center;
+            }
+            button{
+                background-color: black;
+                color: chartreuse;
+                border: 2px solid chartreuse;
+                border-radius: 5px;
+                cursor: pointer;
+            }
+            button:hover{
+                border-color: aliceblue;
+                color:aliceblue;
+                width: 50px;
+                height:30px;
+            }
+                
+            
+
+        </style>
+        <script>
+            function calculate(){
+                var P,R,T,I,M;
+            P=parseFloat(document.getElementById("princ").value);
+            R=parseFloat(document.getElementById("rate").value);
+            T=parseFloat(document.getElementById("year").value);
+            I=((P*R*T)/100);
+            document.getElementById("answer1").value=I;
+            M=I+P;
+            console.log(M)
+            document.getElementById("answer2").value=M;        
+            console.log(I)
+        }
+        </script>
+    </head>
+    <body>''
+        <fieldset>
+            <legend>Sum and Average of five numbers</legend>
+        <p>Enter the first number: <input id="princ" required></p>
+        <p>Enter the second number: <input id="rate" required></p>
+        <p>Enter the third number: <input id="year" required></p>
+        <div>
+        <button onclick="calculate()">Add</button>
+    </div>
+        <p>Sum = <input id="answer1" style="cursor: none;" readonly></p>
+        <p>Average = <input id="answer2" style="cursor: none;" readonly></p>
+    </fieldset>
+    </body>
+</html>
