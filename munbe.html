@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            * {
+                box-sizing: border-box;
+              }
+              body {
+                margin: 0;
+                font-family: Arial;
+                font-size: 17px;
+              }
+              #myVideo{
+                position: fixed;
+                right: 0;
+                bottom: 0;
+                min-width: 100%; 
+                min-height: 100%;
+              }
+              .navbar{
+                overflow: hidden;
+              }
+              
+        </style>
+    </head>
+    <body>
+        <div class="navbar" style=" background-color:rgba(44, 40, 40, 0.661);">
+            <a href="mediaplayer.html" style="font-size:40px;float: left;margin-left:10px;text-decoration:none;color:darkorchid;filter:drop-shadow(2px 2px orange);">Media Player</a>
+            
+              <div style="float:right;margin-right:15px;padding:10px;font-size:x-large;color:darkorchid;filter:drop-shadow(1px 1px orange);" class="dropdown-content">
+                <a style="padding:15px;text-decoration:none;" href="all.html">All</a>
+                <a style="padding:15px;text-decoration:none" href="latest.html">Latest</a>
+                <a style="padding:15px;text-decoration:none" href="romantic.html">Romantic</a>
+                <a style="padding:15px;text-decoration:none" href="lovefailure.html">Love Failure</a>
+                <a style="padding:15px;text-decoration:none" href="jolly.html">Jolly</a>
+              </div>
+            </div> 
+        <video style="z-index:-1;" autoplay muted loop id="myVideo">
+            <source src="Munbe.mp4" type="video/mp4">
+            Your browser does not support HTML5 video.
+          </video>
+        
+        <div>
+        <h1 style="color: rgb(255, 115, 0);margin-left:1%;position:absolute;top:82%;padding:5px"><span style="filter: drop-shadow(2px 2px yellow);">Munbe Va</span></h1>
+       <span style="position:absolute;top:87%;left:15%"><button onclick="window.location.href='ey.html'" class="prev" style="padding: 5px;margin-right:20px;background-color:rgb(255, 115, 0);filter: drop-shadow(2px 2px yellow);border-radius:30%;">Previous</button><button onclick="window.location.href='kadhale.html'" class="next" style="padding-top: 5px;padding-bottom: 5px;padding-left:17px;padding-right:17px;background-color:rgb(255, 115, 0);border-radius:30%;filter: drop-shadow(2px 2px yellow);">Next</button></span>
+      </div>
+        <audio controls style="position: absolute;top:92%;width:100%;">
+            <source src="Munbe.mp3" type="audio/mpeg">
+        </audio>
+    </body>
+    
+</html>
